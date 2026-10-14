@@ -42,9 +42,19 @@ jobs:
           fi
           echo "Using OpenSSL from: $OPENSSL_BIN ($($OPENSSL_BIN version))"
 
-          # Decode certificate and provisioning profile safely using Python 3
+          # Decode certificate safely; use repository mobileprovision file directly if present
           export CERTIFICATE_RAW PP_PATH
-          python3 -c "import os, base64; open(os.environ['CERTIFICATE_RAW'], 'wb').write(base64.b64decode(os.environ['BUILD_CERTIFICATE_BASE64'])); open(os.environ['PP_PATH'], 'wb').write(base64.b64decode(os.environ['PROVISIONING_PROFILE_BASE64']))"
+          python3 -c "
+import os, base64
+open(os.environ['CERTIFICATE_RAW'], 'wb').write(base64.b64decode(os.environ['BUILD_CERTIFICATE_BASE64'].strip()))
+if os.path.exists('ios/GotChores/GotChores_AppStore_Distribution_2026.mobileprovision'):
+    open(os.environ['PP_PATH'], 'wb').write(open('ios/GotChores/GotChores_AppStore_Distribution_2026.mobileprovision', 'rb').read())
+else:
+    raw_pp = os.environ.get('PROVISIONING_PROFILE_BASE64', '').strip()
+    # fix padding if needed
+    raw_pp += '=' * ((4 - len(raw_pp) % 4) % 4)
+    open(os.environ['PP_PATH'], 'wb').write(base64.b64decode(raw_pp))
+"
           ls -la "$CERTIFICATE_RAW" "$PP_PATH"
 
           "$OPENSSL_BIN" pkcs12 -in $CERTIFICATE_RAW -passin pass:"$P12_PASSWORD" -nodes -out $CERTIFICATE_PEM
