@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A30000012D00000100000001 /* GotChoresApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000012D00000100000001 /* GotChoresApp.swift */; };
+		A30000022D00000100000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B30000022D00000100000001 /* Assets.xcassets */; };
+		A30000032D00000100000001 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000032D00000100000001 /* Models.swift */; };
+		A30000042D00000100000001 /* GotChoresSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000042D00000100000001 /* GotChoresSession.swift */; };
+		A30000052D00000100000001 /* GotChoresApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000052D00000100000001 /* GotChoresApi.swift */; };
+		A30000062D00000100000001 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000062D00000100000001 /* OnboardingView.swift */; };
+		A30000072D00000100000001 /* PairScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000072D00000100000001 /* PairScreenView.swift */; };
+		A30000082D00000100000001 /* PasscodeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000082D00000100000001 /* PasscodeScreenView.swift */; };
+		A30000092D00000100000001 /* ParentSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000092D00000100000001 /* ParentSetupView.swift */; };
+		A30000102D00000100000001 /* KidHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000102D00000100000001 /* KidHomeView.swift */; };
+		A30000112D00000100000001 /* ParentHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000112D00000100000001 /* ParentHomeView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		030000012D00000100000001 /* GotChores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GotChores.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B30000012D00000100000001 /* GotChoresApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotChoresApp.swift; sourceTree = "<group>"; };
+		B30000022D00000100000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
+		B30000032D00000100000001 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain/Models.swift; sourceTree = "<group>"; };
+		B30000042D00000100000001 /* GotChoresSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/GotChoresSession.swift; sourceTree = "<group>"; };
+		B30000052D00000100000001 /* GotChoresApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/GotChoresApi.swift; sourceTree = "<group>"; };
+		B30000062D00000100000001 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/OnboardingView.swift; sourceTree = "<group>"; };
+		B30000072D00000100000001 /* PairScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/PairScreenView.swift; sourceTree = "<group>"; };
+		B30000082D00000100000001 /* PasscodeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/PasscodeScreenView.swift; sourceTree = "<group>"; };
+		B30000092D00000100000001 /* ParentSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/ParentSetupView.swift; sourceTree = "<group>"; };
+		B30000102D00000100000001 /* KidHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/KidHomeView.swift; sourceTree = "<group>"; };
+		B30000112D00000100000001 /* ParentHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/ParentHomeView.swift; sourceTree = "<group>"; };
+		B30000122D00000100000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C30000012D00000100000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D30000012D00000100000001 = {
+			isa = PBXGroup;
+			children = (
+				D30000022D00000100000001 /* GotChores */,
+				D30000032D00000100000001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D30000022D00000100000001 /* GotChores */ = {
+			isa = PBXGroup;
+			children = (
+				B30000012D00000100000001 /* GotChoresApp.swift */,
+				B30000122D00000100000001 /* Info.plist */,
+				B30000022D00000100000001 /* Assets.xcassets */,
+				D30000042D00000100000001 /* Core */,
+				D30000052D00000100000001 /* Domain */,
+				D30000062D00000100000001 /* Features */,
+			);
+			path = GotChores;
+			sourceTree = "<group>";
+		};
+		D30000032D00000100000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				030000012D00000100000001 /* GotChores.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D30000042D00000100000001 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B30000042D00000100000001 /* GotChoresSession.swift */,
+				B30000052D00000100000001 /* GotChoresApi.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		D30000052D00000100000001 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B30000032D00000100000001 /* Models.swift */,
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
+		D30000062D00000100000001 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				B30000062D00000100000001 /* OnboardingView.swift */,
+				B30000072D00000100000001 /* PairScreenView.swift */,
+				B30000082D00000100000001 /* PasscodeScreenView.swift */,
+				B30000092D00000100000001 /* ParentSetupView.swift */,
+				B30000102D00000100000001 /* KidHomeView.swift */,
+				B30000112D00000100000001 /* ParentHomeView.swift */,
+			);
+			name = Features;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E30000012D00000100000001 /* GotChores */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F30000012D00000100000001 /* Build configuration list for PBXNativeTarget "GotChores" */;
+			buildPhases = (
+				C30000012D00000100000001 /* Frameworks */,
+				G30000012D00000100000001 /* Sources */,
+				H30000012D00000100000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GotChores;
+			productName = GotChores;
+			productReference = 030000012D00000100000001 /* GotChores.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		030000022D00000100000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					E30000012D00000100000001 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = F30000022D00000100000001 /* Build configuration list for PBXProject "GotChores" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D30000012D00000100000001;
+			productRefGroup = D30000032D00000100000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E30000012D00000100000001 /* GotChores */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		H30000012D00000100000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A30000022D00000100000001 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		G30000012D00000100000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A30000012D00000100000001 /* GotChoresApp.swift in Sources */,
+				A30000032D00000100000001 /* Models.swift in Sources */,
+				A30000042D00000100000001 /* GotChoresSession.swift in Sources */,
+				A30000052D00000100000001 /* GotChoresApi.swift in Sources */,
+				A30000062D00000100000001 /* OnboardingView.swift in Sources */,
+				A30000072D00000100000001 /* PairScreenView.swift in Sources */,
+				A30000082D00000100000001 /* PasscodeScreenView.swift in Sources */,
+				A30000092D00000100000001 /* ParentSetupView.swift in Sources */,
+				A30000102D00000100000001 /* KidHomeView.swift in Sources */,
+				A30000112D00000100000001 /* ParentHomeView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		I30000012D00000100000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		I30000022D00000100000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		I30000032D00000100000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 3BWVS7PL6M;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = GotChores/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gotchores.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		I30000042D00000100000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 3BWVS7PL6M;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = GotChores/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gotchores.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F30000012D00000100000001 /* Build configuration list for PBXNativeTarget "GotChores" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				I30000032D00000100000001 /* Debug */,
+				I30000042D00000100000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F30000022D00000100000001 /* Build configuration list for PBXProject "GotChores" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				I30000012D00000100000001 /* Debug */,
+				I30000022D00000100000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 030000022D00000100000001 /* Project object */;
+}

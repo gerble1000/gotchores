@@ -1,0 +1,17 @@
+# Secrets - never commit API keys
+.env
+.env.local
+android/keystore.properties
+android/app/*.keystore
+
+# Build caches / outputs
+scripts/.cache/
+*.apk
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/captures/
+android/.idea/
+android/*.iml
+.DS_Store
