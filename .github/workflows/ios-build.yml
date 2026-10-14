@@ -47,8 +47,13 @@ jobs:
           python3 -c "import os, base64; open(os.environ['CERTIFICATE_RAW'], 'wb').write(base64.b64decode(os.environ['BUILD_CERTIFICATE_BASE64'].strip())); pp_data = open('ios/GotChores/GotChores_AppStore_Distribution_2026.mobileprovision', 'rb').read() if os.path.exists('ios/GotChores/GotChores_AppStore_Distribution_2026.mobileprovision') else base64.b64decode(os.environ.get('PROVISIONING_PROFILE_BASE64', '').strip() + '=' * ((4 - len(os.environ.get('PROVISIONING_PROFILE_BASE64', '').strip()) % 4) % 4)); open(os.environ['PP_PATH'], 'wb').write(pp_data)"
           ls -la "$CERTIFICATE_RAW" "$PP_PATH"
 
-          "$OPENSSL_BIN" pkcs12 -in $CERTIFICATE_RAW -passin pass:"$P12_PASSWORD" -nodes -out $CERTIFICATE_PEM
-          "$OPENSSL_BIN" pkcs12 -export -in $CERTIFICATE_PEM -out $CERTIFICATE_LEGACY -passout pass:"$P12_PASSWORD" \
+          # Convert PKCS12 using OpenSSL (loading legacy provider if needed for 3DES/RC2 bags)
+          if ! "$OPENSSL_BIN" pkcs12 -legacy -in "$CERTIFICATE_RAW" -passin pass:"$P12_PASSWORD" -nodes -out "$CERTIFICATE_PEM" 2>/dev/null; then
+            echo "Falling back to standard provider parsing..."
+            "$OPENSSL_BIN" pkcs12 -in "$CERTIFICATE_RAW" -passin pass:"$P12_PASSWORD" -nodes -out "$CERTIFICATE_PEM"
+          fi
+
+          "$OPENSSL_BIN" pkcs12 -export -in "$CERTIFICATE_PEM" -out "$CERTIFICATE_LEGACY" -passout pass:"$P12_PASSWORD" \
             -legacy -nomaciter -descert \
             -keypbe PBE-SHA1-3DES -certpbe PBE-SHA1-3DES
 
